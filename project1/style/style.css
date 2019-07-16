@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+.center_image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .description_text_info{
+    text-align: center;
+  }
+
+  footer{
+    text-align: center;
+  }
+  table.center-table {
+    margin-left:auto; 
+    margin-right:auto;
+  }
+
+
+/* top navbar copied from site */
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+
+  /* top navbar copied from site */

@@ -1,0 +1,14 @@
+
+body{
+    background-color:orangered;
+    margin-left:2em;
+}
+
+.participantsList{
+    font-family: Arial, Helvetica, sans-serif;
+    color:blanchedalmond;
+}
+
+#special_item{
+    color:green;
+}
