@@ -3,124 +3,170 @@
   padding: 0;
 }
 
+.top-nav{
+  display:flex;
+  background-color: rgba(248, 203, 0, 1);
+  background:#f8cb00;
+  height:4rem;
+  font-size:1.1rem;
+  align-items:center;
+  flex-wrap: wrap;
+  font-weight: bold;
+  padding-top:1%;
+  padding-right:3%;
+  padding-left:3%;
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgba(248, 203, 0, 1);
-  }
+}
+
+.box1{
+  display:flex;
+
+  background-color: rgba(248, 203, 0, 1);
   
-  .searchHeader li {
-    float: left;
-
-  }
+  width:25%;
+  justify-content: center;
+  border: black;
+  text-align: center;
   
-  li a {
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-weight:bold;
-  }
+}
 
-  .form-search{
-        background-color: rgba(248, 203, 0, 1);
-        padding-left:245px;
-  }
+.box2{
+  display:flex;
+  background-color: rgba(248, 203, 0, 1);
+  width:30%;
+  justify-content: space-around;
+  border-color:black;
+}
 
-  .logo{
-    color:white;
-    font-size:27px;
-    padding-right:42px;
-  }
+.box3{
+  display:flex;
+  background-color: rgba(248, 203, 0, 1);
+  width: 40%;
+  justify-content: flex-start;
+  align-content: flex-start;
 
-  a {
-     color: inherit;
-     text-decoration: none;
-   } 
-
-   .top-nav{
-    background-color: rgba(248, 203, 0, 1);
-
-     padding-left:150px;
-     padding-right:150px;
-     padding-top:20px;
-
-   }
-
-   .search-input{
-     height:40px;
-     width:735px;
-   }
-
-   .search-btn{
-     color:white;
-     background:#6364d8;
-     border-color:#6364d8;
-     padding:8px;
-     border-radius: 10%;
-   }
-
-   .search-form{
-     padding-bottom: 10px;
-   }
+}
 
 
-   .searchHeader{
-     padding-bottom: 20px;
-   }
+.box3 div{
+  /* flex:1; */
+  text-align: start;
+  align-content: center;
+  justify-content: end;
+}
 
 
-   #city{
-    color:#6364d8;
-    padding-right:50px;
-  }
+/* boxa separata */
+.box4{
+  display:flex;
+  background-color: rgba(248, 203, 0, 1);
+  width:100%;
+  height:4rem;
+  align-items:center;
+  justify-content: center;
+  padding-left:3em;
+}
+.search-input{
+  height:3rem;
+  width:50em;
+}
+.search-btn{
+  color:white;
+  background:#6364d8;
+  border-color:#6364d8;
+  height:3rem;
+  padding:8px;
+  border-radius: 10%;
+}
+.logo{
+  color:white;
+  font-size:2em;
+}
 
-  #phone{
-    display: block;
-    text-align: center;
-    padding: 14px 50px ;
-    text-decoration: none;
-    font-weight:bold;
 
-  }
+.column-list{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+  width:250px;
+  position:absolute;
+  top:98px;
+  left:60px;
+  box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.05);
+  padding-left:20px;
+  padding-top:20px;
+  padding-bottom:20px;
+}
 
-  .column-list{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: white;
-    width:250px;
-    position:absolute;
-    top:98px;
-    left:110px;
-    box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.05);
-    padding-left:20px;
-    padding-top:20px;
-    padding-bottom:20px;
-  }
 
+.column-list li{
+  font-size:19px;
+  padding-bottom:10px;
+}
+
+.shop-section-li{
+  font-weight:bold;
+}
+
+.categories-top{
+  color:#a3a3a3;
+}
+
+.hovered-section{
+  color:#f8cb00;
+}
+.city{
+  color:#6364d8;
+}
+
+.border{
+    border:0;
+    margin-left:400px;
+    margin-right:120px;
+}
+
+
+.container1{
+  border: 0;
+  margin-left: 400px;
+  margin-right: 120px;
+ }
+ .flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
   
-  .column-list li{
-    font-size:19px;
-    padding-bottom:10px;
-  }
+  
+ }
+ .flex-container > div {
+  background-color: white;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.05);
 
-  .shop-section-li{
-    font-weight:bold;
-  }
 
-  .categories-top{
-    color:#a3a3a3;
-  }
+ }
+ .product-image{
+  width:150px;
+  height:150px;
+ }
 
-  .hovered-section{
-    color:#f8cb00;
-  }
+ .product-description{
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+ }
+ .product-price{
+  font-size: 16px;
+  font-weight: 700;
+  text-align:center;
+  color: rgb(255, 211, 0)
+}
 
-  .upper-padding{
-    padding-top:10px;
+input{    
+  background: url("../images/search.png") left no-repeat;
+  background-color:white;
   }
