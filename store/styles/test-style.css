@@ -5,38 +5,37 @@
 .flex-header{
   height:6rem;
   font-size:1.1rem;
-  padding-top:2%;
   background-color: #f8cb00;
   font-weight: bold;
-
 }
 
 .container{
   display:flex;
   width:100%;
+  padding-top:2%;
   /* flex-wrap: wrap; */
 }
 
 .container-left{
   display:flex;
-  flex-grow:1;
   flex-wrap: wrap; 
-  background-color:red;
-  padding-left:5%
+  padding-left:5%;
+  width:20%;
+  
 }
 
 .container-right{
   display:flex;
-  flex-grow:3;
-  background-color:purple;
   flex-wrap:wrap;
   padding-right:5%;
-
+  width:80%;
+  padding-left:2%;
+  align-items: flex-start
 }
 
 .upper-right-container{
   display:flex;
-  background-color:green;
+  background-color: #f8cb00;
   width:100%;
   flex-wrap:wrap;
 }
@@ -64,25 +63,26 @@
 
 .box2{
   display:flex;
-  justify-content: space-between;
   flex-grow:1;
-  background-color: red;
+  background-color: #f8cb00;
 
 }
 .box3{
-  background-color: green;
+  display:flex;
+
+  background-color: #f8cb00;
   flex-grow:1;
 
 }
 .box4{
   display:flex;
   flex-grow:2;
-  background-color: blue;
+  background-color: #f8cb00;
   justify-content: flex-start;
   align-content: flex-start;
 }
 .box4 div{
-  padding-left:1rem;
+  padding-left:0.8rem;
 }
 
 
@@ -92,5 +92,111 @@
 }
 
 .city{
+  color:#6364d8;
+}
+
+ .form-search{
+  width:100%;
+  background-color: #f8cb00;
+}
+
+.search-input{
+  height:3rem;
+  width:70%;
+}
+
+.search-btn{
+  color:white;
+  background:#6364d8;
+  border-color:#6364d8;
+  height:3rem;
+  padding:8px;
+  border-radius: 10%;
+}
+
+.category-menu{
+  width: 100;
+}
+
+.ads{
+  margin-top:5rem;
+  
+}
+.ads img{
+  max-width:90%;
+  max-height:90%;
+}
+
+.nav ul{
+  list-style-type: none;
+
+}
+
+.column-list{
+  list-style-type:none;
+}
+
+
+.column-list li{
+  font-size:1.1rem;;
+  padding-bottom:10px;
+}
+
+.shop-section-li{
+  font-weight:bold;
+}
+
+.categories-top{
+  color:#a3a3a3;
+}
+
+.hovered-section{
+  color:#f8cb00;
+}
+
+.upper-brand-menu{
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  width:100%;
+  flex-wrap: wrap
+
+}
+
+.lower-brand-menu{
+  display: flex;
+
+  width:100%;
+  justify-content: space-between;
+  font-size:1.1rem;
+  flex-wrap: wrap
+
+}
+.product-selection-details{
+  display: flex;
+  flex-grow:1;
+  justify-content: space-between;
+}
+
+.sort{
+  display:flex;
+  flex-grow:5;
+  justify-content: flex-end;
+}
+
+.brand-menu{
+  width:100%;
+  height:20%;
+}
+.product-list{
+  width:100%;
+}
+
+.item-type{
+  font-size:1.8rem;
+  font-weight: 500;
+}
+
+div span{
   color:#6364d8;
 }
