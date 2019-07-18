@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.flex-header{
+  height:6rem;
+  font-size:1.1rem;
+  background-color: #f8cb00;
+  font-weight: bold;
+}
+
+.container{
+  display:flex;
+  width:100%;
+  padding-top:2%;
+  /* flex-wrap: wrap; */
+}
+
+.container-left{
+  display:flex;
+  flex-wrap: wrap; 
+  padding-left:5%;
+  width:20%;
+  
+}
+
+.container-right{
+  display:flex;
+  flex-wrap:wrap;
+  padding-right:5%;
+  width:80%;
+  padding-left:2%;
+  align-items: flex-start
+}
+
+.upper-right-container{
+  display:flex;
+  background-color: #f8cb00;
+  width:100%;
+  flex-wrap:wrap;
+}
+.navbar-left-container{
+  background-color: #f8cb00;
+
+}
+.navbar-right-container{
+  background-color: #f8cb00;
+
+}
+.lower-right-container{
+  display:flex;
+  background-color: #f8cb00;
+  width:100%;
+  flex-wrap: wrap;
+}
+
+.box1{
+  display:flex;
+  background-color: #f8cb00;
+  justify-content: center;
+  text-align: center;
+}
+
+.box2{
+  display:flex;
+  flex-grow:1;
+  background-color: #f8cb00;
+
+}
+.box3{
+  display:flex;
+
+  background-color: #f8cb00;
+  flex-grow:1;
+
+}
+.box4{
+  display:flex;
+  flex-grow:2;
+  background-color: #f8cb00;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+.box4 div{
+  padding-left:0.8rem;
+}
+
+
+.logo{
+  color:white;
+  font-size:2rem;
+}
+
+.city{
+  color:#6364d8;
+}
+
+ .form-search{
+  width:100%;
+  background-color: #f8cb00;
+}
+
+.search-input{
+  height:3rem;
+  width:70%;
+}
+
+.search-btn{
+  color:white;
+  background:#6364d8;
+  border-color:#6364d8;
+  height:3rem;
+  padding:8px;
+  border-radius: 10%;
+}
+
+.category-menu{
+  width: 100;
+}
+
+.ads{
+  margin-top:5rem;
+  
+}
+.ads img{
+  max-width:90%;
+  max-height:90%;
+}
+
+.nav ul{
+  list-style-type: none;
+
+}
+
+.column-list{
+  list-style-type:none;
+}
+
+
+.column-list li{
+  font-size:1.1rem;;
+  padding-bottom:10px;
+}
+
+.shop-section-li{
+  font-weight:bold;
+}
+
+.categories-top{
+  color:#a3a3a3;
+}
+
+.hovered-section{
+  color:#f8cb00;
+}
+
+.upper-brand-menu{
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  width:100%;
+  flex-wrap: wrap
+
+}
+
+.lower-brand-menu{
+  display: flex;
+
+  width:100%;
+  justify-content: space-between;
+  font-size:1.1rem;
+  flex-wrap: wrap
+
+}
+.product-selection-details{
+  display: flex;
+  flex-grow:1;
+  justify-content: space-between;
+}
+
+.sort{
+  display:flex;
+  flex-grow:5;
+  justify-content: flex-end;
+}
+
+.brand-menu{
+  width:100%;
+  height:20%;
+}
+.product-list{
+  width:100%;
+}
+
+.item-type{
+  font-size:1.8rem;
+  font-weight: 500;
+}
+
+div span{
+  color:#6364d8;
+}
