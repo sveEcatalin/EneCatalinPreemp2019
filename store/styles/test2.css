@@ -5,7 +5,6 @@
   }
 
 .menu-header{
-    font-size:1.1rem;
     background-color: #f8cb00;
     font-weight: 500;
     width:100%;
@@ -14,9 +13,11 @@
   }
   
   .container{
+    display: flex;
+
     max-width:1200px;
     margin:0 auto;
-
+    align-items: flex-start;
     /* flex-wrap: wrap; */
   }
 
@@ -37,10 +38,25 @@
   .col-2{
     display:flex;
     width:75%;
-    background-color:blue;
     justify-content: flex-end;
     flex-wrap: wrap;
 }
+
+.body-col-1{
+    display:flex;
+    width:25%;
+    flex-wrap: wrap;
+
+}
+
+.body-col-2{
+  display:flex;
+  width:75%;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+
+}
+
 .div-top{
     display:flex;
     width:100%;
@@ -83,7 +99,7 @@
 }
 
 .box3 div{
-    padding-right:10px;
+    padding-left:10px;
 }
 
 .logo{
@@ -99,7 +115,7 @@
     padding-top:15px;
     padding-bottom:15px;
     padding-left:30px;
-    width:80%;
+    width:89%;
 }
 
 .search-btn{
@@ -113,4 +129,231 @@
   .search-input{
     background: url("../images/search.png") left no-repeat;
     background-color:white;
+  }
+
+
+  .body-content{
+    /* background-color: red; */
+    font-weight: 500;
+    width:100%;
+    font-size:20px;
+    padding-top:40px;
+  }
+
+  .left-body-nav{
+      width:100%;
+      padding-left:30px;
+      transform:translateX(-30px)
+      translateY(-100px);
+  }
+  .column-list{
+    list-style-type: none;
+    overflow: hidden;
+    background-color: white;
+    width:100%;
+    /* position:absolute; */
+  }
+
+  .shop-section-li{
+    font-weight:bold;
+  }
+  
+  .categories-top{
+    color:#a3a3a3;
+  }
+  
+  .hovered-section{
+    color:#f8cb00;
+  }
+  
+
+
+  .ads img{
+    max-width:90%;
+    max-height:100%;
+  }
+
+
+  .brand-menu{
+    display:flex;
+    width:100%;
+    flex-wrap: wrap;
+
+  }
+
+  .upper-brand-menu{
+    display: flex;
+    width:100%;
+
+    justify-content: space-between;
+    align-content: space-between;
+
+    flex-wrap: wrap
+  
+  }
+  .lower-brand-menu{
+    display: flex;
+    width:100%;
+
+    flex-wrap: wrap
+  }
+
+
+  .item-type{
+    font-size:28px;
+    font-weight: 500;
+  }
+
+  .arrow-section{
+      font-size:16px;
+  }
+
+
+
+
+
+
+  .lower-brand-menu{
+    display: flex;
+  
+    width:100%;
+    justify-content: space-between;
+    font-size:1.1rem;
+    flex-wrap: wrap
+  
+  }
+  .product-selection-details{
+    display: flex;
+    flex-grow:1;
+    justify-content: space-between;
+  }
+  
+  .sort{
+    display:flex;
+    flex-grow:5;
+    justify-content: flex-end;
+  }
+
+  div span{
+    color:#6364d8;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    
+    
+   }
+   .flex-container > div {
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.05);
+  
+  
+   }
+   .product-image{
+    width:150px;
+    height:150px;
+   }
+  
+   .product-description{
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+   }
+   .product-price{
+    font-size: 16px;
+    font-weight: 700;
+    text-align:center;
+    color: rgb(255, 211, 0)
+  }
+
+
+
+  /* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+    /* //CSS */
+    
+
+    
+  }
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    
+    /* //CSS */
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+    /* //CSS */
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    /* //CSS */
+    
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    
+    /* //CSS */
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    /* //CSS */
+    
   }
