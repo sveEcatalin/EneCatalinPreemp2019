@@ -9,16 +9,16 @@ document.getElementById("firstName").addEventListener("blur", function(event) {
     if (/^[a-zA-Z]+$/.test(value)) {
 
         document.getElementById("firstName").setAttribute("style", "border: 1px solid #777777;");
-
+        console.log(/^[a-zA-Z]+$/.test(value));
+        console.log('Hi');
         firstNameBoole=true;
 
     } else {
         document.getElementById("firstName").setAttribute("style", "border: 1px solid red;");
-
+        console.log(/^[a-zA-Z]+$/.test(value));
+        console.log('Bye');
         firstNameBoole=false;
     }
-
-    checkIfDisabled();
 });
 
 document.getElementById("lastName").addEventListener("blur", function(event) {
@@ -26,35 +26,34 @@ document.getElementById("lastName").addEventListener("blur", function(event) {
     if (/^[a-zA-Z]+$/.test(value)) {
 
         document.getElementById("lastName").setAttribute("style", "border: 1px solid #777777;");
-
+        console.log(/^[a-zA-Z]+$/.test(value));
+        console.log('Hi2');
         lnBoole=true;
 
     } else {
         document.getElementById("lastName").setAttribute("style", "border: 1px solid red;");
-
+        console.log(/^[a-zA-Z]+$/.test(value));
+        console.log('Bye2');
         lnBoole=false;
     }
-
-    checkIfDisabled();
-
 });
 document.getElementById("email").addEventListener("blur", function(event) {
     var value = document.getElementById("email").value;
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
 
         document.getElementById("email").setAttribute("style", "border: 1px solid #777777;");
+        console.log(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value));
+        console.log('Hi3');
 
         mailBoole=true;
 
     } else {
         document.getElementById("email").setAttribute("style", "border: 1px solid red;");
-
+        console.log(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value));
+        console.log('Bye3');
 
         mailBoole=false;
     }
-
-    checkIfDisabled();
-
 });
 
 document.getElementById("phone").addEventListener("blur", function(event) {
@@ -62,29 +61,25 @@ document.getElementById("phone").addEventListener("blur", function(event) {
     if (/^[0-9]*$/.test(value) && value.length>7) {
 
         document.getElementById("phone").setAttribute("style", "border: 1px solid #777777;");
-
+        console.log(/^[0-9]*$/.test(value));
+        console.log('Hi4');
+        console.log(value);
         phoneBoole=true;
 
     } else {
         document.getElementById("phone").setAttribute("style", "border: 1px solid red;");
-
+        console.log(/^[0-9]*$/.test(value));
+        console.log('Bye4');
         phoneBoole=false;
     }
-
-    checkIfDisabled();
-
 });
 
-function checkIfDisabled(){
-    if(  lnBoole===true && firstNameBoole ===true && mailBoole===true && phoneBoole===true){
-        document.getElementById('checkout').disabled = false;
-    
-    }else{
-        document.getElementById('checkout').disabled = true;
 
-    }
-}
 
+
+// document.getElementsByClassName("add").addEventListener("click", function(event) {
+//     console.log("HIIII");
+// });
 
 
 
@@ -93,30 +88,25 @@ let removeButton= document.querySelectorAll(".remove");
 let quantityText = document.querySelectorAll(".quantity");
 let priceText=document.querySelectorAll(".price");
 let RowTotalPrice=document.querySelectorAll(".row-price");
-let removeItemButton = document.querySelectorAll(".remove-item");
-let productsTableElements = document.querySelectorAll(".product");
+let removeItemButton=document.querySelectorAll(".remove-item");
+let productsTableElements = document.querySelectorAll(".products");
 
-let totalTableItemPrice=document.querySelectorAll(".total-price");
-console.log(totalTableItemPrice);
+
+console.log(removeItemButton[4].parentNode.parentNode.rowIndex);
 
 let addRowTotal = (currentQ,currentPrice,index) => {
     let totalPrice;
-    let oldTablePrice;
-    let newTablePrice;
-
     totalPrice= parseInt(priceText[index].innerHTML)*parseInt(currentQ);
-    oldTablePrice=parseInt(totalTableItemPrice[0].innerHTML);
-    // newTablePrice=
-
+    console.log("The current Quantity is "+currentQ[index]);
+    console.log("The current Price is "+currentPrice[index]);
+    console.log("THE TOTAL PRICE IS: " +totalPrice);
     RowTotalPrice[index].innerHTML=totalPrice;
-    totalTableItemPrice[0].innerHTML=tablePrice+totalPrice;
 }
 
 
 let addQuantity = (currentQ,index) => {
     currentQ++;
     quantityText[index].innerHTML=currentQ;
-
     price=parseInt(priceText[index].innerHTML);
     console.log("ADD QUANTITY PRICE IS "+price);
 
@@ -136,54 +126,52 @@ let removeQuantity = (currentQ,index) => {
 }
 
 
+function deleteRow(index) {
+    // console.log(removeItemButton[4].parentNode.parentNode.rowIndex);
 
-for (n=0, length = removeItemButton.length; n < length; n++) {
-    removeItemButton[n].id= "remove" + (n + 1); 
-}
-addButton.forEach((btn,i)=>{
+    productsTableElements[0].deleteRow(index);
+
+  }
+
+  deleteRow();
+ 
+  removeItemButton.forEach((btn,i)=>{
     btn.addEventListener("click",function(event){
-        addQuantity(parseInt(quantityText[i].innerHTML),i);
+        deleteRow(parseInt(i));
+        console.log(i);
+        // console.log(quantityText[i].innerHTML);
     });
 
 })
 
-function deleteRow(index){
+addButton.forEach((btn,i)=>{
+    btn.addEventListener("click",function(event){
+        addQuantity(parseInt(quantityText[i].innerHTML),i);
+        console.log(i);
+        // console.log(quantityText[i].innerHTML);
+    });
 
-}
-console.log("asafafsa",productsTableElements);
-function deleteRow(myElement) {
-
-    myElement.parentNode.removeChild(myElement);
-     
-  }
-
- 
-
-
-console.log("adsasa",removeItemButton);
-for(i=0;i<removeItemButton.length;i++){
-    removeItemButton[i].addEventListener("click",deleteRow.bind(null,productsTableElements[i]));
-}
-
-
-
+})
 
 removeButton.forEach((btn,i)=>{
     btn.addEventListener("click",function(event){
         removeQuantity(parseInt(quantityText[i].innerHTML),i);
-
+        console.log(i);
+        // console.log(quantityText[i].innerHTML);
     });
 
 })
 
-// if( "a"==="a" ){
-//     document.getElementById('checkout').disabled = false;
-// }
 
 document.getElementById("test-id").addEventListener("submit", function(event){
+    console.log("Hlo")
     event.preventDefault();
 
-
+    if(  lnBoole===true && firstNameBoole ===true && mailBoole===true && phoneBoole===true){
+        console.log("this should work")
+    }else{
+        console.log("something went wrong");
+    }
   });
 
 
