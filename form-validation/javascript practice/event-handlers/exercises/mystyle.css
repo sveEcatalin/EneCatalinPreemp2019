@@ -1,0 +1,51 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+.btn-green
+{
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 2px 12px 3px 12px;
+    text-decoration: none;
+
+}
+
+.btn-red{
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 2px 12px 3px 12px;
+    text-decoration: none;
+    display:inline-block;
+}
+
+.btn-blue{
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 2px 12px 3px 12px;
+    text-decoration: none;
+    display:inline-block;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display:block;
+}
+
+.img-parent{
+    background-color:green;
+}
+
+.img-parent{
+    padding:5em;
+}
