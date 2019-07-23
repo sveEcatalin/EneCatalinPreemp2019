@@ -101,15 +101,30 @@ console.log(totalTableItemPrice);
 
 let addRowTotal = (currentQ,currentPrice,index) => {
     let totalPrice;
-    let oldTablePrice;
-    let newTablePrice;
+    let oldTablePrice=parseInt(totalTableItemPrice[0].innerHTML);
+    let price =parseInt(priceText[index].innerHTML);
 
-    totalPrice= parseInt(priceText[index].innerHTML)*parseInt(currentQ);
-    oldTablePrice=parseInt(totalTableItemPrice[0].innerHTML);
-    // newTablePrice=
+    console.log("old table price "+ oldTablePrice);
+    console.log("the item price is "+price );
 
-    RowTotalPrice[index].innerHTML=totalPrice;
-    totalTableItemPrice[0].innerHTML=tablePrice+totalPrice;
+    totalPrice = parseInt(priceText[index].innerHTML) * parseInt(currentQ);
+    RowTotalPrice[index].innerHTML = totalPrice;
+
+    totalTableItemPrice[0].innerHTML=oldTablePrice+price;
+}
+
+let removeRowTotal =(currentQ,index)=>{
+    let totalPrice;
+    let oldTablePrice=parseInt(totalTableItemPrice[0].innerHTML);
+    let price =parseInt(priceText[index].innerHTML);
+
+    console.log("old table price "+ oldTablePrice);
+    console.log("the item price is "+price );
+
+    totalPrice = parseInt(priceText[index].innerHTML) * parseInt(currentQ);
+    RowTotalPrice[index].innerHTML = totalPrice;
+
+    totalTableItemPrice[0].innerHTML=oldTablePrice-price;
 }
 
 
@@ -131,7 +146,7 @@ let removeQuantity = (currentQ,index) => {
     price=parseInt(priceText[index].innerHTML);
     console.log("ADD QUANTITY PRICE IS "+price);
 
-    addRowTotal(currentQ,price,index);
+    removeRowTotal(currentQ,index);
 
 }
 
