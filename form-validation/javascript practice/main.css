@@ -128,3 +128,7 @@ body {
 .price::after {
     content: "$";
 }
+
+#checkout:disabled{
+    background-color:grey;
+}

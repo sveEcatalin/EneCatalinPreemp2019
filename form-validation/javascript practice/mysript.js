@@ -80,7 +80,9 @@ function checkIfDisabled(){
         document.getElementById('checkout').disabled = false;
     
     }else{
+
         document.getElementById('checkout').disabled = true;
+        
 
     }
 }
@@ -108,9 +110,9 @@ let addRowTotal = (currentQ,currentPrice,index) => {
     console.log("the item price is "+price );
 
     totalPrice = parseInt(priceText[index].innerHTML) * parseInt(currentQ);
-    RowTotalPrice[index].innerHTML = totalPrice;
+    RowTotalPrice[index].innerHTML = totalPrice+"$";
 
-    totalTableItemPrice[0].innerHTML=oldTablePrice+price;
+    totalTableItemPrice[0].innerHTML=oldTablePrice+price+"$";
 }
 
 let removeRowTotal =(currentQ,index)=>{
@@ -124,7 +126,7 @@ let removeRowTotal =(currentQ,index)=>{
     totalPrice = parseInt(priceText[index].innerHTML) * parseInt(currentQ);
     RowTotalPrice[index].innerHTML = totalPrice;
 
-    totalTableItemPrice[0].innerHTML=oldTablePrice-price;
+    totalTableItemPrice[0].innerHTML=oldTablePrice-price+"$";
 }
 
 
@@ -140,13 +142,16 @@ let addQuantity = (currentQ,index) => {
 }
 
 let removeQuantity = (currentQ,index) => {
-    currentQ--;
-    quantityText[index].innerHTML=currentQ;
+    if(quantityText[index].innerHTML>0){
+        currentQ--;
+        quantityText[index].innerHTML=currentQ;
+    
+        price=parseInt(priceText[index].innerHTML);
+        console.log("ADD QUANTITY PRICE IS "+price);
+    
+        removeRowTotal(currentQ,index);
+    }
 
-    price=parseInt(priceText[index].innerHTML);
-    console.log("ADD QUANTITY PRICE IS "+price);
-
-    removeRowTotal(currentQ,index);
 
 }
 
@@ -162,12 +167,14 @@ addButton.forEach((btn,i)=>{
 
 })
 
-function deleteRow(index){
 
-}
 console.log("asafafsa",productsTableElements);
-function deleteRow(myElement) {
+function deleteRow(myElement,index) {
+    console.log("ROW TABLE PRICE OF INDEX IS "+RowTotalPrice[index].innerHTML);
 
+    let oldTablePrice=parseInt(totalTableItemPrice[0].innerHTML);
+
+    totalTableItemPrice[0].innerHTML=oldTablePrice-parseInt(RowTotalPrice[index].innerHTML)+"$";
     myElement.parentNode.removeChild(myElement);
      
   }
@@ -177,7 +184,7 @@ function deleteRow(myElement) {
 
 console.log("adsasa",removeItemButton);
 for(i=0;i<removeItemButton.length;i++){
-    removeItemButton[i].addEventListener("click",deleteRow.bind(null,productsTableElements[i]));
+    removeItemButton[i].addEventListener("click",deleteRow.bind(null,productsTableElements[i],i));
 }
 
 
