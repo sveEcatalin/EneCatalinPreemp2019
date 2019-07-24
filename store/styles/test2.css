@@ -125,7 +125,7 @@
     padding-top:15px;
     padding-bottom:15px;
     padding-left:30px;
-    width:89%;
+    width:70%;
 }
 
 .search-btn{
@@ -140,6 +140,55 @@
     background: url("../images/search.png") left no-repeat;
     background-color:white;
   }
+
+ 
+
+.btn-left-contaier{
+
+    background-color:#6364d8;
+    display:inline-block;
+    vertical-align:middle;
+    padding: 13px;
+    text-align: center;
+    border-radius: 5%;
+
+}
+
+.btn-right-container{
+    background-color:#393ab1;
+    display:inline-block;;
+    vertical-align:middle;
+    padding: 13px;
+    text-align: center;
+    border-radius: 5%;
+    color:white;
+
+}
+
+.btn-chart{
+    padding-right:5px;
+
+}
+
+.btn-left-text{
+    color:white;
+}
+
+.btn-container{
+    /* padding-top: 50px; */
+    display:inline-block;
+    background-color:#6364d8;
+    border-radius: 5%;
+
+}
+
+
+
+
+
+
+
+
 
 
   .body-content{
@@ -161,7 +210,19 @@
     overflow: hidden;
     background-color: white;
     width:100%;
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.05);
+    padding-top:1rem;
     /* position:absolute; */
+  }
+
+  .column-list li{
+    padding-bottom:1rem;
+    padding-left:1rem;
+  }
+
+  .column-list .sub-category{
+    padding-left:1.5rem;
+    color:#797979;
   }
 
   .shop-section-li{
@@ -172,7 +233,7 @@
     color:#a3a3a3;
   }
   
-  .hovered-section{
+  .column-list  .hovered-section{
     color:#f8cb00;
   }
   
@@ -181,6 +242,8 @@
   .ads img{
     max-width:90%;
     max-height:100%;
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.05);
+
   }
 
 
@@ -300,6 +363,11 @@
 
 
 
+
+
+
+
+
   /* 
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
@@ -340,28 +408,136 @@
     ##Screen = B/w 768px to 1024px
   */
   
+  @media (min-width: 381px) and (max-width: 600px) {
+    
+    /* //CSS */
+    /* *{
+      color:red;
+    } */
+    .body-col-2{
+      display:flex;
+      width:75%;
+      justify-content: flex-start;
+      
+      /* flex-wrap: wrap; */
+      flex: 2;
+    }
+    .flex-container {
+      display: flex;
+      /* flex-direction: column; */
+      flex-basis: 100%;
+      flex: 1;
+     }
+    
+     .product-box{
+       width:32%
+     }
+
+     .product-image{
+      width:100%;
+      height:auto;
+     }
+  }
+
+  @media (min-width: 260px) and (max-width: 360px) {
+    
+    /* //CSS */
+    *{
+      color:red;
+    }
+
+    .body-col-1{
+      display:none;
+    }
+
+    .body-col-2{
+      display:flex;
+      width:75%;
+      justify-content: flex-start;
+      
+      /* flex-wrap: wrap; */
+      flex: 2;
+    }
+    .flex-container {
+      display: flex;
+      /* flex-direction: column; */
+      flex-basis: 100%;
+      flex: 1;
+      justify-content: center;
+     }
+    
+     .product-box{
+       width:25%
+     }
+
+     .product-image{
+      width:100%;
+      height:auto;
+     }
+
+     .col-1{display:none}
+
+     .box1, .box2{
+       display: none;
+     }
+     .box3,  .box4, .box5, .box6{
+      display:flex;
+      justify-content: center;
+      background-color: #f8cb00;
+      flex-wrap: wrap;
+      margin-left:0.5rem;
+      width: 100%;
+    }
+    .menu-header .container-flex{
+      justify-content: center;
+    }
+    
+
+    .btn-left-contaier{
+
+      background-color:#6364d8;
+      display:inline-block;
+      vertical-align:middle;
+      padding: 4px;
+      padding-top:15px;
+      padding-bottom:15px;
+      text-align: center;
+      border-radius: 5%;
+  
+  }
+  
+  .btn-right-container{
+      background-color:#393ab1;
+      display:inline-block;;
+      vertical-align:middle;
+      padding: 4px;
+      padding-top:15px;
+      padding-bottom:15px;
+      text-align: center;
+      border-radius: 5%;
+      color:white;
+  
+  }
+
+
+  .search-input{
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:30px;
+    width:40%;
+}
+  }
   @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     
     /* //CSS */
-    
+/* 
+    *{
+      color:red;
+    }
+     */
   }
   
-  /* 
-    ##Device = Low Resolution Tablets, Mobiles (Landscape)
-    ##Screen = B/w 481px to 767px
-  */
-  
-  @media (min-width: 481px) and (max-width: 767px) {
-    
-    /* //CSS */
-    
-  }
-  
-  /* 
-    ##Device = Most of the Smartphones Mobiles (Portrait)
-    ##Screen = B/w 320px to 479px
-  */
-  
+
   @media (min-width: 320px) and (max-width: 480px) {
     
     /* //CSS */
