@@ -1,0 +1,42 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+.btn-left-contaier{
+
+    background-color:#6364d8;
+    display:inline-block;
+    vertical-align:middle;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5%;
+
+}
+
+.btn-right-container{
+    background-color:#393ab1;
+    display:inline-block;;
+    vertical-align:middle;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5%;
+
+}
+
+.btn-chart{
+    padding-right:5px;
+
+}
+
+.btn-left-text{
+    color:white;
+}
+
+.btn-container{
+    /* padding-top: 50px; */
+    display:inline-block;
+    background-color:#6364d8;
+    border-radius: 5%;
+
+}
