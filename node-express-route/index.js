@@ -1,16 +1,23 @@
 const express = require("express");
 const app = express();
-const categoriesRoutes = require("./routes/categories");
-const productsRoutes = require("./routes/products");
 
-// console.log("The categories are", categoriesJSON);
-// console.log("The products are", productsJSON);
+const routes = require("./routes/routes");
 
-app.get("/", function(req, res) {
-  res.send("hello world");
-});
+const errorHandler = require("./errorHandlers/errorHandler");
+const fs = require("fs");
 
-app.use("/categories", categoriesRoutes);
-app.use("/products", productsRoutes);
+const https = require("https");
 
-app.listen(5000);
+app.use(errorHandler);
+
+app.use("/", routes);
+
+https
+  .createServer(
+    {
+      key: fs.readFileSync("server.key"),
+      cert: fs.readFileSync("server.cert")
+    },
+    app
+  )
+  .listen(5000);
